@@ -1,0 +1,146 @@
+@font-face {
+  font-family: iranyekan;
+  src: url('./assets/fonts/iranyekanwebmedium.woff');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: iranyekan;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --thirdColor: #ffdc19;
+  --bodyColor: #f6f6f6;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGray: #7c7c7c;
+  --mainPink: #db2777;
+  --mainTransition: all 0.3s linear;
+}
+
+body {
+  position: relative;
+  background-color: var(--bodyColor);
+}
+
+.main-layout {
+  display: flex;
+}
+
+.nav {
+  height: 100vh;
+  width: 250px;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, #324467, #283142);
+  border-radius: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  transition: var(--mainTransition);
+}
+
+.nav__items {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.nav__items::-webkit-scrollbar {
+  display: none;
+}
+
+.nav__item {
+  margin: 5px 0;
+}
+
+.nav__logo {
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--mainWhite);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nav li {
+  margin: 5px 0;
+}
+
+
+.nav__link {
+  color: var(--mainWhite);
+  display: block;
+  display: flex;
+  padding: 12px 8px;
+  transition: var(--mainTransition);
+}
+
+.nav__link:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  border-radius: 1rem;
+}
+
+.nav__item-label {
+  margin-right: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: hidden;
+}
+
+.icon-container {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.app-version {
+  color: #efefef;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#app {
+  height: 200vh;
+  padding: 1rem;
+}
+
+
+/* mini sidebar */
+
+.mini-sidebar.nav {
+  width: 60px;
+  overflow-x: hidden;
+}
+
+.mini-sidebar.nav .nav__link:hover {
+  background-color: transparent;
+  color: var(--thirdColor);
+}
+
+.nav.mini-sidebar .nav__logo {
+  font-size: 1rem;
+}
+
+.nav.mini-sidebar .app-version__label {
+  display: none;
+}
+
+.sidebar-toggler{  
+  transition: var(--mainTransition);
+}
+
+.nav.mini-sidebar .sidebar-toggler{
+  transform: rotate(180deg);
+  margin-right: 10px;
+}

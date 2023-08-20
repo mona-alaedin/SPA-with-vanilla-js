@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA with vanilla js</title>
+  <link rel="stylesheet" href="client/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="main-layout">
+    <nav class="nav">
+      <div class="nav__logo">SPA</div>
+      <ul class="nav__items">
+        <li class="nav__item">
+          <a href="/" class="nav__link" data-link>
+            <span class="icon-container">
+              <i class="bi bi-dot"></i>
+            </span>
+            <span class="nav__item-label">داشبورد</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products" class="nav__link" data-link>
+            <span class="icon-container">
+              <i class="bi bi-bag"></i>
+            </span>
+            <span class="nav__item-label">محصولات</span>
+          </a>
+        </li>
+        <li>
+          <a href="/posts" class="nav__link" data-link>
+            <span class="icon-container">
+              <i class="bi bi-stickies"></i>
+            </span>
+            <span class="nav__item-label">پست ها</span>
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="nav__link" data-link>
+            <span class="icon-container">
+              <span class="icon-container">
+                <i class="bi bi-person-lines-fill"></i>
+              </span>
+            </span>
+            <span class="nav__item-label">درباره ما</span>
+          </a>
+        </li>
+      </ul>
+      <div class="app-version">
+        <span class="app-version__label">SPA v.1</span>
+        <span class="icon-container sidebar-toggler">
+          <i class="bi bi-chevron-double-right"></i>
+        </span>
+      </div>
+    </nav>
+    <main id="app"></main>
+  </div>
+</body>
+<script src="client/index.js" type="module"></script>
+
+</html>
